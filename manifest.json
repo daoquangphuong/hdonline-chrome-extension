@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
 
-  "name": "LeoKnight-VIP",
+  "name": "LK-VIP",
   "description": "A extension of LeoKnight",
   "version": "1.0",
   "content_scripts": [
