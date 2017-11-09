@@ -8,6 +8,7 @@ if (!window.injected) {
         data = data.replace(/jwplayer\('hdoplayer'\).getState\(\) !=  null/g, 'false');
         data = data.replace(/eval\(function/g, 'var oldJwplayer = jwplayer; var hook = 1; jwplayer = function (name) { if (hook) { hook = 0; return { setup: function (config) { var key = Object.keys(config.plugins)[0]; config.plugins[key].vads = false; oldJwplayer(name).setup(config); } } } return oldJwplayer(name); }; eval(function');
         data = data.replace(/http:\/\/hub\.blueserving\.com\/\?skip=5&url=/g, '');
+        data = data.replace(/onclick="hdonline_pop\(\);"/g, '');
         return data;
     }
 
